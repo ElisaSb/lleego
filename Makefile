@@ -29,6 +29,8 @@ install: ## Install project in Unix
 	make env-install-unix
 	make net-create
 	make start
+	make composer-install
+	make compose-ssh
 	@echo 'Installed successfully, now go to http://127.0.7.14 on your navigator!'
 
 composer-install: ## Install composer dependencies

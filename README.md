@@ -12,10 +12,17 @@ $ sudo apt install make
 ```console
 $ make build
 $ make install
-$ make compose-ssh
 ```
-* Al acceder desde un navegador a "http://127.0.7.14" podremos ver el mensaje --> "Hola, Mundo!" en la pantalla.
+* Al acceder desde un navegador a "http://127.0.7.14/api" podremos ver el mensaje --> "Server is ready!" en la pantalla.
 
+***
+
+* Al acceder desde un navegador a "http://127.0.7.14/api/avail?origin=MAD&destination=BIO&date=2022-06-01" obtendremos el GET con la petición esperada.
+* Al lanzar los siguientes comandos en una terminal, obtendremos la respuesta esperada:
+```console
+$ make ssh-be
+$ php bin/console lleego:avail MAD BIO 2023-06-01
+```
 ***
 
 ### Datos sobre la prueba
@@ -25,5 +32,3 @@ Las características de la prueba son las siguientes:
 * Se encuentra configurada con Docker.
 * PHP: 7.4
 * Symfony: 5
-* Para acceder a la documentación del proyecto, haga clic [aquí](http://127.0.7.14/api/doc).
-  * Las rutas de la api RESTful son las que se encuentran separadas por el tag "api user".
